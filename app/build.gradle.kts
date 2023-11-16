@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.kotlin_practise"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.kotlin_practise"
@@ -50,7 +50,7 @@ android {
 }
 
 dependencies {
-
+    implementation ("androidx.constraintlayout:constraintlayout:2.1.0")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     implementation("androidx.activity:activity-compose:1.8.0")
