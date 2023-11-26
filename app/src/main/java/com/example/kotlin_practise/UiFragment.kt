@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlin_practise.databinding.FragmentUiBinding
 import com.example.kotlin_practise.databinding.TagItemBinding
@@ -49,8 +51,13 @@ class UiFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-       return inflater.inflate(R.layout.fragment_ui, container, false)
+        binding = FragmentUiBinding.inflate(inflater, container, false)
+        val navController = findNavController()
+        val buttonToSecond = binding.buttonToSecond
+        buttonToSecond.setOnClickListener {
+            navController.navigate(R.id.action_uiFragment_to_secondFragment)
+        }
+       return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -70,8 +77,16 @@ class UiFragment : Fragment() {
         layoutManager.flexWrap = FlexWrap.WRAP
         recyclerView.layoutManager = layoutManager
 
+        binding.buttonExit.setOnClickListener {
+            // Отображение Toast при нажатии на кнопку
+            showToast()
+        }
 
+    }
 
+    private fun showToast() {
+        val toast = Toast.makeText(requireContext(), "Button Exit Clicked", Toast.LENGTH_SHORT)
+        toast.show()
     }
 
     override fun onDestroyView() {

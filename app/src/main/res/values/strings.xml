@@ -10,4 +10,6 @@
     <string name="tags">Тэги</string>
     <string name="button">Кнопка</string>
     <string name="exit">Выйти</string>
+    <string name="nextFragment">Следующий фрагмент</string>
+    <string name="nextFragmentMain">Перейти в main фрагмент</string>
 </resources>

@@ -158,7 +158,7 @@
         android:layout_marginEnd="22dp"
 
         android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/button1"
+        app:layout_constraintBottom_toTopOf="@+id/buttonToSecond"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -167,7 +167,7 @@
         app:layout_constraintWidth_default="spread" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/buttonToSecond"
         android:layout_width="154dp"
         android:layout_height="43dp"
         android:layout_marginStart="20dp"
@@ -182,6 +182,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
+        android:id="@+id/buttonExit"
         android:layout_width="154dp"
         android:layout_height="43dp"
         android:layout_marginStart="10dp"
@@ -193,7 +194,7 @@
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button1" />
+        app:layout_constraintStart_toEndOf="@+id/buttonToSecond" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
