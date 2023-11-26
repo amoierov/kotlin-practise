@@ -1,3 +1,6 @@
+import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
+
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -51,7 +54,9 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
 }
+
 
 dependencies {
     implementation ("com.google.android.flexbox:flexbox:3.0.0")

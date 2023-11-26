@@ -2,7 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="360dp"
-    android:layout_height="640dp">
+    android:layout_height="640dp" >
 
     <ImageView
         android:id="@+id/avatarImageView"
@@ -40,7 +40,7 @@
 
 
     <TextView
-        android:id="@+id/some_mail"
+        android:id="@+id/mail"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
         android:layout_alignParentTop="true"
@@ -63,7 +63,8 @@
         android:layout_marginTop="27dp"
         app:cardCornerRadius="6dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/some_mail">
+        app:layout_constraintTop_toBottomOf="@+id/mail">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -129,7 +130,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/text_image" />
 
 
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -149,18 +149,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/some_card" />
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="22dp"
+
         android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/button1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/some_text_tag"
+        app:layout_constraintVertical_bias="0.0"
         app:layout_constraintWidth_default="spread" />
-
 
     <Button
         android:id="@+id/button1"
@@ -168,12 +172,12 @@
         android:layout_height="43dp"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="32dp"
-        android:textAllCaps="false"
-        android:text="@string/button"
+        android:background="@drawable/rounded_button_purple"
         android:fontFamily="@font/open_sans_bold"
+        android:text="@string/button"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="18sp"
-        android:background="@drawable/rounded_button_purple"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -182,12 +186,12 @@
         android:layout_height="43dp"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="32dp"
-        android:textAllCaps="false"
-        android:text="@string/exit"
+        android:background="@drawable/rounded_button_red"
         android:fontFamily="@font/open_sans_bold"
+        android:text="@string/exit"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="18sp"
-        android:background="@drawable/rounded_button_red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button1" />
 
