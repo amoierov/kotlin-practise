@@ -10,7 +10,10 @@ import com.example.kotlin_practise.databinding.FragmentSecondBinding
 import com.example.kotlin_practise.databinding.FragmentThirdBinding
 
 class ThirdFragment : Fragment() {
-    private lateinit var binding: FragmentThirdBinding
+    private var _binding: FragmentThirdBinding? = null
+    // This property is only valid between onCreateView and
+// onDestroyView.
+    private val binding get() = _binding!!
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -20,7 +23,7 @@ class ThirdFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentThirdBinding.inflate(inflater, container, false)
+        _binding = FragmentThirdBinding.inflate(inflater, container, false)
         val navController = findNavController()
         val buttonToSecond = binding.buttonToUiFragment
         buttonToSecond.setOnClickListener {
@@ -30,5 +33,8 @@ class ThirdFragment : Fragment() {
         return binding.root
     }
 
-
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

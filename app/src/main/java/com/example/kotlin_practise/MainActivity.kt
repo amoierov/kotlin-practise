@@ -1,6 +1,7 @@
 package com.example.kotlin_practise
 
 import android.os.Bundle
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -20,18 +21,18 @@ class MainActivity : AppCompatActivity() {
 
         val appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
+
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                if (navController.currentDestination?.id != R.id.uiFragment) {
+                    navController.navigate(R.id.uiFragment)
+                } else {
+                    finish()
+                }
+            }
+        })
     }
-    @Deprecated("Deprecated in Java")
-    override fun onBackPressed() {
-        // Переопределение обработки кнопки "назад"
-        if (navController.currentDestination?.id != R.id.uiFragment) {
-            // Если текущий фрагмент - третий, то навигация к главному фрагменту
-            navController.navigate(R.id.uiFragment)
-        } else {
-            // В противном случае, стандартное поведение для кнопки "назад"
-            super.onBackPressed()
-        }
-    }
+
 }
 
 

@@ -17,9 +17,8 @@
         android:paddingBottom="2dp"
         android:background="@color/green"
         android:fontFamily="@font/open_sans_semi_bold"
-        android:text=""
         android:textColor="@color/white"
-        android:textSize="11sp"
+        android:textSize="@dimen/text_size_11_sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
