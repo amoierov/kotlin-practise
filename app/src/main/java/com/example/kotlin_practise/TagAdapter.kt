@@ -10,7 +10,7 @@ class TagAdapter(private val tagList: List<String>) :
     RecyclerView.Adapter<TagAdapter.TagViewHolder>() {
 
     class TagViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val binding = TagItemBinding.bind(itemView)
+        private val binding = TagItemBinding.bind(itemView)
         fun bind(item: String) {
             binding.tgtext.text = item
         }
