@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/uiFragment">
+
+    <fragment
+        android:id="@+id/uiFragment"
+        android:name="com.example.kotlin_practise.UiFragment"
+        android:label="Main Fragment">
+        <action
+            android:id="@+id/action_uiFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.kotlin_practise.SecondFragment"
+        android:label="Second Fragment">
+        <action
+            android:id="@+id/action_secondFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.example.kotlin_practise.ThirdFragment"
+        android:label="Third Fragment">
+        <action
+            android:id="@+id/action_thirdFragment_to_mainFragment"
+            app:destination="@id/uiFragment" />
+    </fragment>
+</navigation>

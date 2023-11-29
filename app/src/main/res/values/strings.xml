@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">kotlin-practise</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="user_name">Имя пользователя</string>
+    <string name="text">Текст текст текст текст текст текст текст текст текст текст текст текст</string>
+    <string name="sign">Подпись:</string>
+    <string name="inscription">Надпись</string>
+    <string name="mail">mail@mail.ru</string>
+    <string name="tags">Тэги</string>
+    <string name="button">Кнопка</string>
+    <string name="exit">Выйти</string>
+    <string name="nextFragment">Следующий фрагмент</string>
+    <string name="nextFragmentMain">Перейти в main фрагмент</string>
 </resources>
