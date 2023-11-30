@@ -16,7 +16,7 @@ class ThirdFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.buttonToUiFragment.setOnClickListener {
-            findNavController().navigate(R.id.action_secondFragment_to_thirdFragment)
+            navigateTo(R.id.action_thirdFragment_to_cardListFragment)
         }
     }
 }

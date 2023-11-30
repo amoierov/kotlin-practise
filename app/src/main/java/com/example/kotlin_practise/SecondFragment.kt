@@ -17,7 +17,7 @@ class SecondFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.buttonToThird.setOnClickListener {
-            findNavController().navigate(R.id.action_secondFragment_to_thirdFragment)
+            navigateTo(R.id.action_secondFragment_to_thirdFragment)
         }
     }
 }

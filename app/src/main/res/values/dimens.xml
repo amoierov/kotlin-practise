@@ -13,4 +13,5 @@
     <dimen name="app_height">640dp</dimen>
     <dimen name="button_width">154dp</dimen>
     <dimen name="button_height">43dp</dimen>
+    <dimen name="card_list_margin">3dp</dimen>
 </resources>
