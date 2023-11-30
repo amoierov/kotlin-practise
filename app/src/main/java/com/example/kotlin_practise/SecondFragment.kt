@@ -11,7 +11,8 @@ import com.example.kotlin_practise.databinding.FragmentSecondBinding
 import com.example.kotlin_practise.databinding.FragmentUiBinding
 
 
-class SecondFragment : Fragment(R.layout.fragment_second) {
+class SecondFragment : BaseFragment() {
+    override fun getLayoutRes(): Int = R.layout.fragment_second
     private val binding by viewBinding(FragmentSecondBinding::bind)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

@@ -10,7 +10,8 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.kotlin_practise.databinding.FragmentSecondBinding
 import com.example.kotlin_practise.databinding.FragmentThirdBinding
 
-class ThirdFragment : Fragment(R.layout.fragment_third) {
+class ThirdFragment : BaseFragment() {
+    override fun getLayoutRes(): Int = R.layout.fragment_third
     private val binding by viewBinding(FragmentThirdBinding::bind)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

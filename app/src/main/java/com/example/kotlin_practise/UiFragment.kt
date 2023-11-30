@@ -17,8 +17,8 @@ import com.google.android.flexbox.FlexDirection
 import com.google.android.flexbox.FlexWrap
 import com.google.android.flexbox.FlexboxLayoutManager
 
-class UiFragment : Fragment(R.layout.fragment_ui) {
-
+class UiFragment : BaseFragment() {
+    override fun getLayoutRes(): Int = R.layout.fragment_ui
     private val binding by viewBinding(FragmentUiBinding::bind)
     private var tagList = emptyList<String>()
     private fun modelBinding(model: MyModel) {
@@ -32,6 +32,7 @@ class UiFragment : Fragment(R.layout.fragment_ui) {
         binding.textView2.text = model.signature
 
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -47,7 +48,7 @@ class UiFragment : Fragment(R.layout.fragment_ui) {
         recyclerView.layoutManager = layoutManager
 
         binding.buttonToSecond.setOnClickListener {
-            findNavController().navigate(R.id.action_uiFragment_to_secondFragment)
+            navigateTo(R.id.action_uiFragment_to_secondFragment)
         }
 
         binding.buttonExit.setOnClickListener {
@@ -61,3 +62,4 @@ class UiFragment : Fragment(R.layout.fragment_ui) {
     }
 
 }
+
