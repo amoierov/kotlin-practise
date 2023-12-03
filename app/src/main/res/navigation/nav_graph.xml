@@ -36,7 +36,15 @@
         android:name="com.example.kotlin_practise.CardListFragment"
         android:label="CardListFragment">
         <action
-            android:id="@+id/action_cardListFragment_to_uiFragment"
-            app:destination="@id/uiFragment" />
+            android:id="@+id/action_cardListFragment_to_fileListFragment"
+            app:destination="@id/fileListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fileListFragment"
+        android:name="com.example.kotlin_practise.FileListFragment"
+        android:label="FileListFragment">
+<!--        <action-->
+<!--            android:id="@+id/action_FileListFragment_to_uiFragment"-->
+<!--            app:destination="@id/uiFragment" />-->
     </fragment>
 </navigation>

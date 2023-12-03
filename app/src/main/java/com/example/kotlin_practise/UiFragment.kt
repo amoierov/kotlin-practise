@@ -1,8 +1,10 @@
 package com.example.kotlin_practise
 
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.kotlin_practise.databinding.FragmentUiBinding
@@ -28,6 +30,7 @@ class UiFragment : BaseFragment() {
 
     }
 
+    @RequiresApi(Build.VERSION_CODES.R)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -41,7 +44,6 @@ class UiFragment : BaseFragment() {
         layoutManager.flexDirection = FlexDirection.ROW
         layoutManager.flexWrap = FlexWrap.WRAP
         recyclerView.layoutManager = layoutManager
-
         binding.buttonToSecond.setOnClickListener {
             navigateTo(R.id.action_uiFragment_to_secondFragment)
         }
@@ -55,6 +57,7 @@ class UiFragment : BaseFragment() {
         val toast = Toast.makeText(requireContext(), "Button Exit Clicked", Toast.LENGTH_SHORT)
         toast.show()
     }
+
 
 }
 

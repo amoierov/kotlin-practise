@@ -19,7 +19,7 @@ class CardAdapter(
             if (card.picture) {
                 binding.im.visibility = View.VISIBLE
                 binding.im.setOnClickListener {
-                    navController.navigate(R.id.action_cardListFragment_to_uiFragment)
+                    navController.navigate(R.id.action_cardListFragment_to_fileListFragment)
                 }
             } else {
                 binding.im.visibility = View.GONE
