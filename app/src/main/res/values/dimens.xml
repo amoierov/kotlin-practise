@@ -3,6 +3,7 @@
     <dimen name="avatar_len">77.14dp</dimen>
     <dimen name="margin_standard">22dp</dimen>
     <dimen name="margin_card_view_horizontal">16dp</dimen>
+    <dimen name="margin_card_view_bottom_top">27dp</dimen>
     <dimen name="margin_card_view_vertical">20dp</dimen>
     <dimen name="text_size_18_sp">18sp</dimen>
     <dimen name="text_size_11_sp">11sp</dimen>
@@ -13,4 +14,25 @@
     <dimen name="app_height">640dp</dimen>
     <dimen name="button_width">154dp</dimen>
     <dimen name="button_height">43dp</dimen>
+    <dimen name="card_list_margin">3dp</dimen>
+    <dimen name="card_item_margin">8dp</dimen>
+    <dimen name="fragment_file_list_padding">16dp</dimen>
+    <dimen name="ui_margin">30dp</dimen>
+    <dimen name="img_margin_end">13dp</dimen>
+    <dimen name="img_margin_start">16dp</dimen>
+    <dimen name="button_1_margin_start">20dp</dimen>
+    <dimen name="button_2_margin_start">10dp</dimen>
+    <dimen name="button_margin_bottom">32dp</dimen>
+    <dimen name="rec_view_margin_start">10dp</dimen>
+    <dimen name="rec_view_margin_end">22dp</dimen>
+    <dimen name="tag_margin_top">22dp</dimen>
+    <dimen name="tag_margin_end">30dp</dimen>
+    <dimen name="card_text_margin_start">5dp</dimen>
+    <dimen name="card_text_margin_top">12dp</dimen>
+    <dimen name="card_text_margin_end">16dp</dimen>
+    <dimen name="item_file_padding">8dp</dimen>
+    <dimen name="tag_item_padding_start_end">10dp</dimen>
+    <dimen name="tag_item_margin_start_top">12dp</dimen>
+    <dimen name="tag_item_padding_top">1dp</dimen>
+    <dimen name="tag_item_padding_bottom">2dp</dimen>
 </resources>

@@ -1,5 +1,6 @@
 *.iml
 .gradle
+/local_data/
 /local.properties
 /.idea/caches
 /.idea/libraries

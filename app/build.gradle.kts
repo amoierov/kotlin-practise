@@ -59,6 +59,8 @@ android {
 
 
 dependencies {
+    implementation ("com.github.kirich1409:viewbindingpropertydelegate-full:1.5.9")
+    implementation ("com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.5.9")
     implementation ("androidx.navigation:navigation-fragment-ktx:2.7.5")
     implementation ("androidx.navigation:navigation-ui-ktx:2.7.5")
     implementation ("com.google.android.flexbox:flexbox:3.0.0")

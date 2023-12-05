@@ -7,7 +7,6 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
-import com.example.kotlin_practise.UiFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
@@ -32,7 +31,6 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
-
 }
 
 

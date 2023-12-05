@@ -9,22 +9,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/ui_margin"
         android:src="@drawable/avatar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
-        android:id="@+id/some_id"
+        android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_standard"
         android:layout_marginTop="@dimen/margin_standard"
-        android:layout_marginEnd="30dp"
+        android:layout_marginEnd="@dimen/ui_margin"
         android:fontFamily="@font/roboto_bold"
         android:gravity="top"
         android:text="@string/user_name"
-        android:textSize="16sp"
+        android:textSize="@dimen/text_size_16_sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/avatarImageView" />
     <TextView
@@ -49,7 +49,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="@dimen/margin_standard"
         android:layout_marginEnd="@dimen/margin_standard"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="@dimen/margin_card_view_bottom_top"
         app:cardCornerRadius="@dimen/CornerRadius"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mail">
@@ -59,20 +59,20 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/some_image"
-                android:layout_width="60dp"
-                android:layout_height="65dp"
-                android:layout_marginStart="16dp"
+                android:id="@+id/some_image_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/img_margin_start"
                 android:layout_marginTop="@dimen/margin_card_view_vertical"
-                android:layout_marginEnd="13dp"
+                android:layout_marginEnd="@dimen/img_margin_end"
                 android:background="@drawable/image"
                 android:visibility="visible"
-                app:layout_constraintEnd_toStartOf="@+id/text_image"
+                app:layout_constraintEnd_toStartOf="@+id/text_image_card"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/text_image"
+                android:id="@+id/text_image_card"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_card_view_horizontal"
@@ -83,17 +83,16 @@
                 android:textSize="@dimen/text_size_14_sp"
                 android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0"
-                app:layout_constraintStart_toEndOf="@+id/some_image"
+                app:layout_constraintStart_toEndOf="@+id/some_image_card"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
             <TextView
-                android:id="@+id/textView1"
+                android:id="@+id/sign_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_card_view_horizontal"
-                android:layout_marginBottom="27dp"
+                android:layout_marginBottom="@dimen/margin_card_view_bottom_top"
                 android:fontFamily="@font/open_sans_bold"
                 android:text="@string/sign"
                 android:textSize="@dimen/text_size_18_sp"
@@ -102,21 +101,21 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/user_sign_card"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="27dp"
+                android:layout_marginStart="@dimen/card_text_margin_start"
+                android:layout_marginTop="@dimen/card_text_margin_top"
+                android:layout_marginEnd="@dimen/card_text_margin_end"
+                android:layout_marginBottom="@dimen/margin_card_view_bottom_top"
                 android:fontFamily="@font/open_sans_regular"
                 android:text="@string/inscription"
                 android:textSize="@dimen/text_size_18_sp"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView1"
-                app:layout_constraintTop_toBottomOf="@+id/text_image" />
+                app:layout_constraintStart_toEndOf="@+id/sign_card"
+                app:layout_constraintTop_toBottomOf="@+id/text_image_card" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -129,8 +128,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_standard"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginTop="@dimen/tag_margin_top"
+        android:layout_marginEnd="@dimen/tag_margin_end"
         android:fontFamily="@font/roboto_bold"
         android:gravity="top"
         android:text="@string/tags"
@@ -140,24 +139,22 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcView"
+        android:id="@+id/rcView_tags"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="22dp"
+        android:layout_marginStart="@dimen/rec_view_margin_start"
+        android:layout_marginEnd="@dimen/rec_view_margin_end"
         app:layout_constraintBottom_toTopOf="@+id/buttonToSecond"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/some_text_tag"
-        app:layout_constraintVertical_bias="0.0"
         app:layout_constraintWidth_default="spread" />
     <Button
         android:id="@+id/buttonToSecond"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="@dimen/button_1_margin_start"
+        android:layout_marginBottom="@dimen/button_margin_bottom"
         android:background="@drawable/rounded_button_purple"
         android:fontFamily="@font/open_sans_bold"
         android:text="@string/button"
@@ -170,8 +167,8 @@
         android:id="@+id/buttonExit"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart= "@dimen/button_2_margin_start"
+        android:layout_marginBottom="@dimen/button_margin_bottom"
         android:background="@drawable/rounded_button_red"
         android:fontFamily="@font/open_sans_bold"
         android:text="@string/exit"

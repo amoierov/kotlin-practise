@@ -27,7 +27,21 @@
         android:name="com.example.kotlin_practise.ThirdFragment"
         android:label="Third Fragment">
         <action
-            android:id="@+id/action_thirdFragment_to_mainFragment"
-            app:destination="@id/uiFragment" />
+            android:id="@+id/action_thirdFragment_to_cardListFragment"
+            app:destination="@id/cardListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cardListFragment"
+        android:name="com.example.kotlin_practise.CardListFragment"
+        android:label="CardListFragment">
+        <action
+            android:id="@+id/action_cardListFragment_to_fileListFragment"
+            app:destination="@id/fileListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fileListFragment"
+        android:name="com.example.kotlin_practise.FileListFragment"
+        android:label="FileListFragment">
     </fragment>
 </navigation>
