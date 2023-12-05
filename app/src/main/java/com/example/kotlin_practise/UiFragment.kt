@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.kotlin_practise.adapters.TagAdapter
 import com.example.kotlin_practise.databinding.FragmentUiBinding
 import com.example.kotlin_practise.models.MyModel
 import com.example.kotlin_practise.models.modelInstance2
@@ -14,19 +15,18 @@ import com.google.android.flexbox.FlexDirection
 import com.google.android.flexbox.FlexWrap
 import com.google.android.flexbox.FlexboxLayoutManager
 
-class UiFragment : BaseFragment() {
-    override fun getLayoutRes(): Int = R.layout.fragment_ui
+class UiFragment : BaseFragment(R.layout.fragment_ui) {
     private val binding by viewBinding(FragmentUiBinding::bind)
     private var tagList = emptyList<String>()
     private fun modelBinding(model: MyModel) {
         tagList = model.tags
 
-        if (model.picture) binding.someImage.visibility = View.VISIBLE
-        else binding.someImage.visibility = View.GONE
+        if (model.picture) binding.someImageCard.visibility = View.VISIBLE
+        else binding.someImageCard.visibility = View.GONE
 
         binding.mail.text = model.userName
-        binding.textImage.text = model.descriptor
-        binding.textView2.text = model.signature
+        binding.textImageCard.text = model.descriptor
+        binding.userSignCard.text = model.signature
 
     }
 
@@ -34,7 +34,7 @@ class UiFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val recyclerView: RecyclerView = view.findViewById(R.id.rcView)
+        val recyclerView: RecyclerView = view.findViewById(R.id.rcView_tags)
         modelBinding(modelInstance2)
 
         val adapter = TagAdapter(tagList)

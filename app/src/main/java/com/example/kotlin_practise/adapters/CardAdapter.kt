@@ -1,31 +1,28 @@
-package com.example.kotlin_practise
+package com.example.kotlin_practise.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.NavController
-import androidx.navigation.Navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlin_practise.databinding.CardItemBinding
 import com.example.kotlin_practise.models.MyModel
 
 class CardAdapter(
     private val cardList: MutableList<MyModel>,
-    private val navController: NavController
+    private val onClick: () -> Unit
 ) : RecyclerView.Adapter<CardAdapter.CardHolder>() {
     class CardHolder(private val binding: CardItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(card: MyModel, navController: NavController) {
+        fun bind(card: MyModel, onClick: () -> Unit) {
             if (card.picture) {
-                binding.im.visibility = View.VISIBLE
-                binding.im.setOnClickListener {
-                    navController.navigate(R.id.action_cardListFragment_to_fileListFragment)
+                binding.image.visibility = View.VISIBLE
+                binding.image.setOnClickListener {
+                    onClick()
                 }
             } else {
-                binding.im.visibility = View.GONE
+                binding.image.visibility = View.GONE
             }
             binding.cardUserName.text = card.userName
-            binding.cardSign.text = card.signature
+            binding.signUser.text = card.signature
         }
     }
 
@@ -37,7 +34,7 @@ class CardAdapter(
 
     override fun onBindViewHolder(holder: CardHolder, position: Int) {
         val card = cardList[position]
-        holder.bind(card, navController)
+        holder.bind(card) {onClick()}
     }
 
     override fun getItemCount(): Int {

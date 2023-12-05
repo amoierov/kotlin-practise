@@ -1,4 +1,4 @@
-package com.example.kotlin_practise
+package com.example.kotlin_practise.first_stage
 
 
 fun removeElement(numbers: IntArray, number: Int): IntArray {

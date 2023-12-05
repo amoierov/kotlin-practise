@@ -1,10 +1,11 @@
-package com.example.kotlin_practise
+package com.example.kotlin_practise.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.kotlin_practise.R
 
 
 data class FileItem(val fileName: String,

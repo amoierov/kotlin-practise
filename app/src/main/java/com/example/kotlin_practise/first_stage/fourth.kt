@@ -1,4 +1,4 @@
-package com.example.kotlin_practise
+package com.example.kotlin_practise.first_stage
 
 fun List<Int>.decorateEvenElements(): List<Int> {
     return mapIndexed { index, value -> if (index % 2 != 0) value * 2 else value }

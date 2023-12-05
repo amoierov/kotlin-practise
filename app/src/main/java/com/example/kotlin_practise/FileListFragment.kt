@@ -7,38 +7,29 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.provider.Settings
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.kotlin_practise.adapters.FileAdapter
+import com.example.kotlin_practise.adapters.FileItem
+import com.google.android.flexbox.FlexboxLayoutManager
 import java.io.File
 
-class FileListFragment : Fragment() {
-
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var fileAdapter: FileAdapter
+class FileListFragment : BaseFragment(R.layout.fragment_file_list) {
 
     @RequiresApi(Build.VERSION_CODES.R)
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_file_list, container, false)
-
-        recyclerView = view.findViewById(R.id.recyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(activity)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val recyclerView: RecyclerView = view.findViewById(R.id.recyclerView)
+        val layoutManager = FlexboxLayoutManager(requireContext())
+        recyclerView.layoutManager = layoutManager
 
         checkStoragePermission()
 
         val downloadDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
-        fileAdapter = FileAdapter(getFilesInDirectory(downloadDirectory))
+        val fileAdapter: FileAdapter = FileAdapter(getFilesInDirectory(downloadDirectory))
         recyclerView.adapter = fileAdapter
-
-        return view
     }
 
     private fun getFilesInDirectory(directory: File): List<FileItem> {
