@@ -35,4 +35,7 @@
     <dimen name="tag_item_margin_start_top">12dp</dimen>
     <dimen name="tag_item_padding_top">1dp</dimen>
     <dimen name="tag_item_padding_bottom">2dp</dimen>
+    <dimen name="horizontal_bias_value">0.051</dimen>
+    <dimen name="vertical_bias_value">0.545</dimen>
+    <dimen name="constraintWidth_percent">0.8</dimen>
 </resources>

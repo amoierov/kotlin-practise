@@ -25,7 +25,7 @@ class UiFragment : BaseFragment(R.layout.fragment_ui) {
         else binding.someImageCard.visibility = View.GONE
 
         binding.mail.text = model.userName
-        binding.textImageCard.text = model.descriptor
+        binding.textImageCard.text = model.description
         binding.userSignCard.text = model.signature
 
     }

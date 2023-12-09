@@ -43,5 +43,13 @@
         android:id="@+id/fileListFragment"
         android:name="com.example.kotlin_practise.FileListFragment"
         android:label="FileListFragment">
+        <action
+            android:id="@+id/action_fileListFragment_to_dublicateModelFragment"
+            app:destination="@id/dublicateModelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dublicateModelFragment"
+        android:name="com.example.kotlin_practise.DublicateModelFragment"
+        android:label="DublicateModelFragment">
     </fragment>
 </navigation>

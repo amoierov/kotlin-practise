@@ -28,7 +28,7 @@ class FileListFragment : BaseFragment(R.layout.fragment_file_list) {
         checkStoragePermission()
 
         val downloadDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
-        val fileAdapter: FileAdapter = FileAdapter(getFilesInDirectory(downloadDirectory))
+        val fileAdapter = FileAdapter(getFilesInDirectory(downloadDirectory)) {navigateTo(R.id.action_fileListFragment_to_dublicateModelFragment)}
         recyclerView.adapter = fileAdapter
     }
 
