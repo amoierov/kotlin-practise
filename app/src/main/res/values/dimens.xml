@@ -38,4 +38,8 @@
     <dimen name="horizontal_bias_value">0.051</dimen>
     <dimen name="vertical_bias_value">0.545</dimen>
     <dimen name="constraintWidth_percent">0.8</dimen>
+    <dimen name="margin_top_editText">64dp</dimen>
+    <dimen name="margin_start_editText">108dp</dimen>
+    <dimen name="text_vertical_bias">0.3</dimen>
+    <dimen name="margin_start_button">160dp</dimen>
 </resources>

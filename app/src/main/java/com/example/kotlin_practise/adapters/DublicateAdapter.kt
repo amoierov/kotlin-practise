@@ -7,12 +7,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlin_practise.R
 import com.example.kotlin_practise.databinding.DublicateItemBinding
 
-class DublicateAdapter(private val hashMapList: HashMap<String, Int>): RecyclerView.Adapter<DublicateAdapter.DublicateViewHolder>() {
+class DublicateAdapter(private val hashMapList: HashMap<String, Int>, private val onClick: () -> Unit): RecyclerView.Adapter<DublicateAdapter.DublicateViewHolder>() {
     class DublicateViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         private val binding = DublicateItemBinding.bind(itemView)
-        fun bind(key: String, value: Int){
+        fun bind(key: String, value: Int,  onClick: () -> Unit){
             binding.valueText.text = "$key - "
             binding.countValue.text = value.toString()
+            binding.valueText.setOnClickListener {
+                onClick()
+            }
         }
     }
 
@@ -26,7 +29,7 @@ class DublicateAdapter(private val hashMapList: HashMap<String, Int>): RecyclerV
         val entryAtIndex = hashMapList.entries.elementAt(position)
         val key = entryAtIndex.key
         val value = entryAtIndex.value
-        holder.bind(key, value)
+        holder.bind(key, value) {onClick()}
     }
 
     override fun getItemCount(): Int {

@@ -1,17 +1,10 @@
 package com.example.kotlin_practise
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.kotlin_practise.adapters.CardAdapter
 import com.example.kotlin_practise.adapters.DublicateAdapter
-import com.example.kotlin_practise.models.MyModel
-import com.example.kotlin_practise.models.modelInstance1
-import com.example.kotlin_practise.models.modelInstance2
-import com.example.kotlin_practise.models.modelInstance3
-import com.example.kotlin_practise.models.modelInstance4
+import com.example.kotlin_practise.models.*
 import com.google.android.flexbox.FlexboxLayoutManager
 
 
@@ -29,7 +22,7 @@ class DublicateModelFragment : BaseFragment(R.layout.fragment_dublicate_model) {
         val hashmap = find_dublicate(combinedList)
         removeEntriesWithSpecificValue(hashmap, 1)
         val recyclerView: RecyclerView = view.findViewById(R.id.rcViewDublicate)
-        val adapter = DublicateAdapter(hashmap)
+        val adapter = DublicateAdapter(hashmap) {navigateTo(R.id.action_dublicateModelFragment_to_inputFragment)}
         recyclerView.adapter = adapter
         val layoutManager = FlexboxLayoutManager(requireContext())
         recyclerView.layoutManager = layoutManager

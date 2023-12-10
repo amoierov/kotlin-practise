@@ -51,5 +51,13 @@
         android:id="@+id/dublicateModelFragment"
         android:name="com.example.kotlin_practise.DublicateModelFragment"
         android:label="DublicateModelFragment">
+        <action
+            android:id="@+id/action_dublicateModelFragment_to_inputFragment"
+            app:destination="@id/inputFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inputFragment"
+        android:name="com.example.kotlin_practise.InputFragment"
+        android:label="InputFragment">
     </fragment>
 </navigation>
