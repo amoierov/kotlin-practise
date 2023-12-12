@@ -42,4 +42,8 @@
     <dimen name="margin_start_editText">108dp</dimen>
     <dimen name="text_vertical_bias">0.3</dimen>
     <dimen name="margin_start_button">160dp</dimen>
+    <dimen name="trainee_list_margin_top">99dp</dimen>
+    <dimen name="trainee_list_margin_start_button">160dp</dimen>
+    <dimen name="trainee_list_margin_start_input">105dp</dimen>
+    <dimen name="traine_item_padding">8dp</dimen>
 </resources>

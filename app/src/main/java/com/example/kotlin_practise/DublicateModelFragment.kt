@@ -3,14 +3,17 @@ package com.example.kotlin_practise
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.kotlin_practise.adapters.DublicateAdapter
+import com.example.kotlin_practise.databinding.FragmentDublicateModelBinding
+import com.example.kotlin_practise.databinding.FragmentFileListBinding
 import com.example.kotlin_practise.models.*
 import com.google.android.flexbox.FlexboxLayoutManager
 
 
 class DublicateModelFragment : BaseFragment(R.layout.fragment_dublicate_model) {
 
-
+    private val binding by viewBinding(FragmentDublicateModelBinding::bind)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -21,7 +24,7 @@ class DublicateModelFragment : BaseFragment(R.layout.fragment_dublicate_model) {
 
         val hashmap = find_dublicate(combinedList)
         removeEntriesWithSpecificValue(hashmap, 1)
-        val recyclerView: RecyclerView = view.findViewById(R.id.rcViewDublicate)
+        val recyclerView = binding.rcViewDublicate
         val adapter = DublicateAdapter(hashmap) {navigateTo(R.id.action_dublicateModelFragment_to_inputFragment)}
         recyclerView.adapter = adapter
         val layoutManager = FlexboxLayoutManager(requireContext())

@@ -34,7 +34,7 @@ class UiFragment : BaseFragment(R.layout.fragment_ui) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val recyclerView: RecyclerView = view.findViewById(R.id.rcView_tags)
+        val recyclerView = binding.rcViewTags
         modelBinding(modelInstance2)
 
         val adapter = TagAdapter(tagList)

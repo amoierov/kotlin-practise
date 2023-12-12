@@ -59,5 +59,13 @@
         android:id="@+id/inputFragment"
         android:name="com.example.kotlin_practise.InputFragment"
         android:label="InputFragment">
+        <action
+            android:id="@+id/action_inputFragment_to_TraineeListFragment"
+            app:destination="@id/traineeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/traineeListFragment"
+        android:name="com.example.kotlin_practise.TraineeListFragment"
+        android:label="TraineeListFragment">
     </fragment>
 </navigation>

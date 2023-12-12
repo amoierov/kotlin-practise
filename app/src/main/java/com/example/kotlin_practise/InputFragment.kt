@@ -17,5 +17,8 @@ class InputFragment : BaseFragment(R.layout.fragment_input) {
             val numbers = inputText.split(",").mapNotNull { it.trim().toIntOrNull() }.toSet()
             binding.textResult.text = numbers.toString()
         }
+        binding.buttonNextFragment.setOnClickListener {
+            navigateTo(R.id.action_inputFragment_to_TraineeListFragment)
+        }
     }
 }

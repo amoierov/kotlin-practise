@@ -36,8 +36,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_start_button"
         android:layout_marginTop="@dimen/margin_top_editText"
-        android:text="Button"
+        android:text="@string/delete_dublicates"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextDigits" />
+
+    <Button
+        android:id="@+id/buttonNextFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_start_button"
+        android:layout_marginTop="@dimen/margin_top_editText"
+        android:text="@string/next"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonInput" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
