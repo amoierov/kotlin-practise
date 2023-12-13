@@ -1,12 +1,12 @@
-package com.example.kotlin_practise
+package com.example.kotlin_practise.fragments
 
 import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.recyclerview.widget.RecyclerView
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.kotlin_practise.R
 import com.example.kotlin_practise.adapters.TagAdapter
 import com.example.kotlin_practise.databinding.FragmentUiBinding
 import com.example.kotlin_practise.models.MyModel

@@ -46,4 +46,9 @@
     <dimen name="trainee_list_margin_start_button">160dp</dimen>
     <dimen name="trainee_list_margin_start_input">105dp</dimen>
     <dimen name="traine_item_padding">8dp</dimen>
+    <dimen name="textView_threadFragment_constraintVertical_bias">0.40</dimen>
+    <dimen name="button_margin_start_threadFragment">162dp</dimen>
+    <dimen name="button_margin_top_threadFragment">88dp</dimen>
+    <dimen name="trainee_list_margin_top_next_button">36dp</dimen>
+
 </resources>

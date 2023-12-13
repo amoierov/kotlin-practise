@@ -1,8 +1,9 @@
-package com.example.kotlin_practise
+package com.example.kotlin_practise.fragments
 
 import android.os.Bundle
 import android.view.View
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.kotlin_practise.R
 import com.example.kotlin_practise.databinding.FragmentThirdBinding
 
 class ThirdFragment : BaseFragment(R.layout.fragment_third) {

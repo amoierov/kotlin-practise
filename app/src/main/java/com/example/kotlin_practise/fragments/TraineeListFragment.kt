@@ -1,9 +1,9 @@
-package com.example.kotlin_practise
+package com.example.kotlin_practise.fragments
 
 import android.os.Bundle
 import android.view.View
-import androidx.recyclerview.widget.RecyclerView
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.kotlin_practise.R
 import com.example.kotlin_practise.adapters.TraineeAdapter
 import com.example.kotlin_practise.databinding.FragmentTraineeListBinding
 import com.example.kotlin_practise.models.printTrainees
@@ -26,7 +26,9 @@ class TraineeListFragment : BaseFragment(R.layout.fragment_trainee_list) {
             val targetTraineeList = printTrainees(shortTraineeList, stage.toInt())
             adapter.setData(targetTraineeList)
         }
-
+        binding.buttonNextFragment.setOnClickListener {
+            navigateTo(R.id.action_traineeListFragment_to_threadFragment)
+        }
         val layoutManager = FlexboxLayoutManager(requireContext())
         binding.rcViewTrainees.layoutManager = layoutManager
     }

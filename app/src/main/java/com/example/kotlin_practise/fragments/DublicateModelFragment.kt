@@ -1,13 +1,16 @@
-package com.example.kotlin_practise
+package com.example.kotlin_practise.fragments
 
 import android.os.Bundle
 import android.view.View
-import androidx.recyclerview.widget.RecyclerView
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.kotlin_practise.R
 import com.example.kotlin_practise.adapters.DublicateAdapter
 import com.example.kotlin_practise.databinding.FragmentDublicateModelBinding
-import com.example.kotlin_practise.databinding.FragmentFileListBinding
-import com.example.kotlin_practise.models.*
+import com.example.kotlin_practise.models.MyModel
+import com.example.kotlin_practise.models.modelInstance1
+import com.example.kotlin_practise.models.modelInstance2
+import com.example.kotlin_practise.models.modelInstance3
+import com.example.kotlin_practise.models.modelInstance4
 import com.google.android.flexbox.FlexboxLayoutManager
 
 

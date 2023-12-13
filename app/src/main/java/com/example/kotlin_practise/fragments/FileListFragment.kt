@@ -1,4 +1,4 @@
-package com.example.kotlin_practise
+package com.example.kotlin_practise.fragments
 
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -10,12 +10,11 @@ import android.provider.Settings
 import android.view.View
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
-import androidx.recyclerview.widget.RecyclerView
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.kotlin_practise.R
 import com.example.kotlin_practise.adapters.FileAdapter
 import com.example.kotlin_practise.adapters.FileItem
 import com.example.kotlin_practise.databinding.FragmentFileListBinding
-import com.example.kotlin_practise.databinding.FragmentUiBinding
 import com.google.android.flexbox.FlexboxLayoutManager
 import java.io.File
 

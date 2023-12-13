@@ -1,8 +1,9 @@
-package com.example.kotlin_practise
+package com.example.kotlin_practise.fragments
 
 import android.os.Bundle
 import android.view.View
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.kotlin_practise.R
 import com.example.kotlin_practise.databinding.FragmentInputBinding
 
 
@@ -18,7 +19,7 @@ class InputFragment : BaseFragment(R.layout.fragment_input) {
             binding.textResult.text = numbers.toString()
         }
         binding.buttonNextFragment.setOnClickListener {
-            navigateTo(R.id.action_inputFragment_to_TraineeListFragment)
+            navigateTo(R.id.action_inputFragment_to_traineeListFragment)
         }
     }
 }
