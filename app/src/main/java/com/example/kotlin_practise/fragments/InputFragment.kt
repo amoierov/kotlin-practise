@@ -6,9 +6,7 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.kotlin_practise.R
 import com.example.kotlin_practise.databinding.FragmentInputBinding
 
-
 class InputFragment : BaseFragment(R.layout.fragment_input) {
-
 
     private val binding by viewBinding(FragmentInputBinding::bind)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

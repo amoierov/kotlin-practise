@@ -4,7 +4,6 @@ import androidx.navigation.fragment.findNavController
 
 abstract class BaseFragment(layoutId: Int) : Fragment(layoutId) {
 
-
     protected fun navigateTo(destinationId: Int) {
         findNavController().navigate(destinationId)
     }

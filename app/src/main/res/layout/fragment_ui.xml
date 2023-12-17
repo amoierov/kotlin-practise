@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
-        android:id="@+id/user_name"
+        android:id="@+id/userNameUi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_standard"
@@ -42,7 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/avatarImageView" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/some_card"
+        android:id="@+id/someCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -59,7 +59,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/some_image_card"
+                android:id="@+id/someImageCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/img_margin_start"
@@ -67,12 +67,12 @@
                 android:layout_marginEnd="@dimen/img_margin_end"
                 android:background="@drawable/image"
                 android:visibility="visible"
-                app:layout_constraintEnd_toStartOf="@+id/text_image_card"
+                app:layout_constraintEnd_toStartOf="@+id/textImageCard"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/text_image_card"
+                android:id="@+id/textImageCard"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_card_view_horizontal"
@@ -83,12 +83,12 @@
                 android:textSize="@dimen/text_size_14_sp"
                 android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/some_image_card"
+                app:layout_constraintStart_toEndOf="@+id/someImageCard"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
             <TextView
-                android:id="@+id/sign_card"
+                android:id="@+id/signCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_card_view_horizontal"
@@ -101,7 +101,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
-                android:id="@+id/user_sign_card"
+                android:id="@+id/userSignCard"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/card_text_margin_start"
@@ -114,8 +114,8 @@
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/sign_card"
-                app:layout_constraintTop_toBottomOf="@+id/text_image_card" />
+                app:layout_constraintStart_toEndOf="@+id/signCard"
+                app:layout_constraintTop_toBottomOf="@+id/textImageCard" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -124,7 +124,7 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/some_text_tag"
+        android:id="@+id/someTextTag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_standard"
@@ -135,11 +135,11 @@
         android:text="@string/tags"
         android:textSize="@dimen/text_size_16_sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/some_card" />
+        app:layout_constraintTop_toBottomOf="@+id/someCard" />
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcView_tags"
+        android:id="@+id/rcViewTags"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/rec_view_margin_start"
@@ -147,7 +147,7 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonToSecond"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/some_text_tag"
+        app:layout_constraintTop_toBottomOf="@+id/someTextTag"
         app:layout_constraintWidth_default="spread" />
     <Button
         android:id="@+id/buttonToSecond"

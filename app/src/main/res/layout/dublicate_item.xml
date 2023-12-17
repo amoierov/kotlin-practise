@@ -6,7 +6,7 @@
     android:layout_margin="@dimen/margin_standard">
 
     <TextView
-        android:id="@+id/value_text"
+        android:id="@+id/valueText"
         android:layout_width="0dp"
         app:layout_constraintWidth_percent="@dimen/constraintWidth_percent"
         android:layout_height="wrap_content"
@@ -19,12 +19,12 @@
         app:layout_constraintVertical_bias="@dimen/vertical_bias_value" />
 
     <TextView
-        android:id="@+id/count_value"
+        android:id="@+id/countValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/tag_margin_top"
         android:text="@string/tags"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/value_text"
+        app:layout_constraintStart_toEndOf="@+id/valueText"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

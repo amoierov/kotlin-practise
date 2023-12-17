@@ -13,7 +13,6 @@ import com.example.kotlin_practise.models.modelInstance3
 import com.example.kotlin_practise.models.modelInstance4
 import com.google.android.flexbox.FlexboxLayoutManager
 
-
 class DublicateModelFragment : BaseFragment(R.layout.fragment_dublicate_model) {
 
     private val binding by viewBinding(FragmentDublicateModelBinding::bind)
@@ -22,10 +21,8 @@ class DublicateModelFragment : BaseFragment(R.layout.fragment_dublicate_model) {
         super.onViewCreated(view, savedInstanceState)
         val list1 = listOf(modelInstance1, modelInstance2)
         val list2 = listOf(modelInstance3, modelInstance4)
-
         val combinedList = list1 + list2
-
-        val hashmap = find_dublicate(combinedList)
+        val hashmap = findDublicate(combinedList)
         removeEntriesWithSpecificValue(hashmap, 1)
         val recyclerView = binding.rcViewDublicate
         val adapter = DublicateAdapter(hashmap) {navigateTo(R.id.action_dublicateModelFragment_to_inputFragment)}
@@ -33,10 +30,9 @@ class DublicateModelFragment : BaseFragment(R.layout.fragment_dublicate_model) {
         val layoutManager = FlexboxLayoutManager(requireContext())
         recyclerView.layoutManager = layoutManager
     }
-
-
 }
-fun find_dublicate (combinedList: List<MyModel>): HashMap<String, Int> {
+
+fun findDublicate (combinedList: List<MyModel>): HashMap<String, Int> {
     val hashMap = HashMap<String, Int>()
     for (model in combinedList ){
         val userName = model.userName

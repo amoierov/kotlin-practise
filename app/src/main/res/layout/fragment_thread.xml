@@ -9,7 +9,7 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/output_textView"
+        android:id="@+id/outputTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_blank_fragment"
@@ -20,13 +20,13 @@
         app:layout_constraintVertical_bias="@dimen/textView_threadFragment_constraintVertical_bias" />
 
     <Button
-        android:id="@+id/button_start"
+        android:id="@+id/buttonStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/button_margin_start_threadFragment"
         android:layout_marginTop="@dimen/button_margin_top_threadFragment"
         android:text="@string/start"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/output_textView" />
+        app:layout_constraintTop_toBottomOf="@+id/outputTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
