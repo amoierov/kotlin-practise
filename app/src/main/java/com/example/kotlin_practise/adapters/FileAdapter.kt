@@ -10,7 +10,7 @@ import com.example.kotlin_practise.R
 
 data class FileItem(val fileName: String,
                    )
-class FileAdapter(private val files: List<FileItem>) : RecyclerView.Adapter<FileAdapter.FileViewHolder>() {
+class FileAdapter(private val files: List<FileItem>, private val onClick: () -> Unit) : RecyclerView.Adapter<FileAdapter.FileViewHolder>() {
 
     class FileViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val fileNameTextView: TextView = itemView.findViewById(R.id.fileNameTextView)
@@ -25,6 +25,9 @@ class FileAdapter(private val files: List<FileItem>) : RecyclerView.Adapter<File
     override fun onBindViewHolder(holder: FileViewHolder, position: Int) {
         val fileItem = files[position]
         holder.fileNameTextView.text = fileItem.fileName
+        holder.fileNameTextView.setOnClickListener {
+            onClick()
+        }
     }
 
     override fun getItemCount(): Int {

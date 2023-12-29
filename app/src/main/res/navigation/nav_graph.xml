@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     app:startDestination="@id/uiFragment">
 
     <fragment
         android:id="@+id/uiFragment"
-        android:name="com.example.kotlin_practise.UiFragment"
+        android:name="com.example.kotlin_practise.fragments.UiFragment"
         android:label="Main Fragment">
         <action
             android:id="@+id/action_uiFragment_to_secondFragment"
@@ -15,7 +14,7 @@
 
     <fragment
         android:id="@+id/secondFragment"
-        android:name="com.example.kotlin_practise.SecondFragment"
+        android:name="com.example.kotlin_practise.fragments.SecondFragment"
         android:label="Second Fragment">
         <action
             android:id="@+id/action_secondFragment_to_thirdFragment"
@@ -24,7 +23,7 @@
 
     <fragment
         android:id="@+id/thirdFragment"
-        android:name="com.example.kotlin_practise.ThirdFragment"
+        android:name="com.example.kotlin_practise.fragments.ThirdFragment"
         android:label="Third Fragment">
         <action
             android:id="@+id/action_thirdFragment_to_cardListFragment"
@@ -33,7 +32,7 @@
 
     <fragment
         android:id="@+id/cardListFragment"
-        android:name="com.example.kotlin_practise.CardListFragment"
+        android:name="com.example.kotlin_practise.fragments.CardListFragment"
         android:label="CardListFragment">
         <action
             android:id="@+id/action_cardListFragment_to_fileListFragment"
@@ -41,7 +40,41 @@
     </fragment>
     <fragment
         android:id="@+id/fileListFragment"
-        android:name="com.example.kotlin_practise.FileListFragment"
+        android:name="com.example.kotlin_practise.fragments.FileListFragment"
         android:label="FileListFragment">
+        <action
+            android:id="@+id/action_fileListFragment_to_dublicateModelFragment"
+            app:destination="@id/dublicateModelFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/dublicateModelFragment"
+        android:name="com.example.kotlin_practise.fragments.DublicateModelFragment"
+        android:label="DublicateModelFragment">
+        <action
+            android:id="@+id/action_dublicateModelFragment_to_inputFragment"
+            app:destination="@id/inputFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inputFragment"
+        android:name="com.example.kotlin_practise.fragments.InputFragment"
+        android:label="InputFragment">
+        <action
+            android:id="@+id/action_inputFragment_to_traineeListFragment"
+            app:destination="@id/traineeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/traineeListFragment"
+        android:name="com.example.kotlin_practise.fragments.TraineeListFragment"
+        android:label="TraineeListFragment">
+        <action
+            android:id="@+id/action_traineeListFragment_to_threadFragment"
+            app:destination="@id/threadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/threadFragment"
+        android:name="com.example.kotlin_practise.fragments.ThreadFragment"
+        android:label="ThreadFragment">
+
+    </fragment>
+
 </navigation>

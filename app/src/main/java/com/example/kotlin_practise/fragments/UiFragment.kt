@@ -1,12 +1,12 @@
-package com.example.kotlin_practise
+package com.example.kotlin_practise.fragments
 
 import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.recyclerview.widget.RecyclerView
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.kotlin_practise.R
 import com.example.kotlin_practise.adapters.TagAdapter
 import com.example.kotlin_practise.databinding.FragmentUiBinding
 import com.example.kotlin_practise.models.MyModel
@@ -25,7 +25,7 @@ class UiFragment : BaseFragment(R.layout.fragment_ui) {
         else binding.someImageCard.visibility = View.GONE
 
         binding.mail.text = model.userName
-        binding.textImageCard.text = model.descriptor
+        binding.textImageCard.text = model.description
         binding.userSignCard.text = model.signature
 
     }
@@ -34,7 +34,7 @@ class UiFragment : BaseFragment(R.layout.fragment_ui) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val recyclerView: RecyclerView = view.findViewById(R.id.rcView_tags)
+        val recyclerView = binding.rcViewTags
         modelBinding(modelInstance2)
 
         val adapter = TagAdapter(tagList)

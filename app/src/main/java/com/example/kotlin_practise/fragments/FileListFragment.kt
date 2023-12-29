@@ -1,4 +1,4 @@
-package com.example.kotlin_practise
+package com.example.kotlin_practise.fragments
 
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -10,25 +10,28 @@ import android.provider.Settings
 import android.view.View
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
-import androidx.recyclerview.widget.RecyclerView
+import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.kotlin_practise.R
 import com.example.kotlin_practise.adapters.FileAdapter
 import com.example.kotlin_practise.adapters.FileItem
+import com.example.kotlin_practise.databinding.FragmentFileListBinding
 import com.google.android.flexbox.FlexboxLayoutManager
 import java.io.File
 
 class FileListFragment : BaseFragment(R.layout.fragment_file_list) {
 
+    private val binding by viewBinding(FragmentFileListBinding::bind)
     @RequiresApi(Build.VERSION_CODES.R)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val recyclerView: RecyclerView = view.findViewById(R.id.recyclerView)
+        val recyclerView = binding.recyclerView
         val layoutManager = FlexboxLayoutManager(requireContext())
         recyclerView.layoutManager = layoutManager
 
         checkStoragePermission()
 
         val downloadDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
-        val fileAdapter: FileAdapter = FileAdapter(getFilesInDirectory(downloadDirectory))
+        val fileAdapter = FileAdapter(getFilesInDirectory(downloadDirectory)) {navigateTo(R.id.action_fileListFragment_to_dublicateModelFragment)}
         recyclerView.adapter = fileAdapter
     }
 

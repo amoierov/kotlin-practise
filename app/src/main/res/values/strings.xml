@@ -12,4 +12,13 @@
     <string name="exit">Выйти</string>
     <string name="nextFragment">Следующий фрагмент</string>
     <string name="nextFragmentMain">Перейти в main фрагмент</string>
+    <string name="name">Name</string>
+    <string name="show">Показать</string>
+    <string name="name_trainee">Name:</string>
+    <string name="age_trainee">Age:</string>
+    <string name="stage">Stage:</string>
+    <string name="scores">Scores:</string>
+    <string name="delete_dublicates">Ввести</string>
+    <string name="next">Next</string>
+    <string name="start">Старт</string>
 </resources>
